@@ -27,7 +27,7 @@ class TosotEntity(CoordinatorEntity[GRCoordinator]):
         self._attr_unique_id = f"{device.id}"
         self._attr_device_info = DeviceInfo(
             identifiers={(DOMAIN, device.id)},
-            manufacturer="Gree",
+            manufacturer="TOSOT",
             model=device.detail.model or device.detail.dtype or device.type,
             name=device.name,
         )

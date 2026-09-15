@@ -53,7 +53,7 @@ rules:
 
   discovery:
     status: exempt
-    comment: Cloud-based integration; devices are discovered via Gree cloud API, not local network protocols.
+    comment: Cloud-based integration; devices are discovered through the TOSOT account, not local network protocols.
   discovery-update-info:
     status: exempt
     comment: No local network discovery to update; all data comes from the cloud endpoint.

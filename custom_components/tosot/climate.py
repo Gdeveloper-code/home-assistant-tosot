@@ -38,7 +38,7 @@ from .coordinator import GRCoordinator
 from .entity import TosotEntity
 from .tosot_protocol import Device, DevState, GreeStandardCloudError
 
-# Gree mode string → HA HVACMode.
+# Cloud mode string → HA HVACMode.
 _MODE_TO_HVAC: dict[str, HVACMode] = {
     "cool": HVACMode.COOL,
     "heat": HVACMode.HEAT,
@@ -103,7 +103,7 @@ async def async_setup_entry(
 ) -> None:
     """Create climate entities for all ac/multiAc devices.
 
-    Devices discovered later (e.g. added to the Gree account then a refresh is
+    Devices discovered later (e.g. added to the TOSOT account then a refresh is
     triggered) get their entities added via the coordinator listener.
     """
     coordinator = entry.runtime_data
@@ -126,7 +126,7 @@ async def async_setup_entry(
 
 
 class TosotClimateEntity(TosotEntity, ClimateEntity):
-    """A Gree standard-cloud climate device."""
+    """A TOSOT cloud climate device."""
 
     # Fan mode values stay as protocol strings (s1..s6 / auto / quiet /
     # strong); the frontend translates them via

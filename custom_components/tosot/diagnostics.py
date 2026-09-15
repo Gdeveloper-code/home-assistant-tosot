@@ -8,7 +8,7 @@ from homeassistant.core import HomeAssistant
 from . import TosotConfigEntry
 
 # Sensitive fields stored in the config entry — never expose them in a
-# diagnostics download. ``name``/``title`` carry the Gree account display name
+# diagnostics download. ``name``/``title`` carry the TOSOT account display name
 # (often the registered phone number), so they are personal data too.
 TO_REDACT = frozenset(
     {
