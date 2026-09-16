@@ -8,4 +8,9 @@
 - Support for power, HVAC mode, temperature, fan speed, and manual refresh.
 - Browser verification fallback when automated sign-in requires a CAPTCHA.
 - Correct TOSOT manufacturer branding in Home Assistant device information.
-- English, Simplified Chinese, and Traditional Chinese user guides.
+- User guides in English, German, Spanish, French, Brazilian Portuguese, Japanese, Korean, Simplified Chinese, and Traditional Chinese.
+
+### Fixed
+
+- Prevented a previous sign-in session from affecting a new credential attempt.
+- Clarified the browser verification steps, including the expected localhost redirect.
