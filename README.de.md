@@ -2,7 +2,7 @@
 
 [English](README.md) | [Deutsch](README.de.md) | [Español](README.es.md) | [Français](README.fr.md) | [Português (Brasil)](README.pt-BR.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh-Hans.md) | [繁體中文](README.zh-Hant.md)
 
-TOSOT ist eine inoffizielle, von der Community gepflegte Home-Assistant-Integration für technikaffine Anwender. Sie verbindet unterstützte TOSOT+-Klimageräte über das TOSOT+-Cloudkonto des Benutzers mit Home Assistant.
+Unterstützte TOSOT+-Klimageräte mit Home Assistant verbinden.
 
 ## Funktionen
 

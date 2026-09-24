@@ -2,7 +2,7 @@
 
 [English](README.md) | [Deutsch](README.de.md) | [Español](README.es.md) | [Français](README.fr.md) | [Português (Brasil)](README.pt-BR.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [简体中文](README.zh-Hans.md) | [繁體中文](README.zh-Hant.md)
 
-TOSOT は、技術愛好家向けにコミュニティが保守する非公式の Home Assistant インテグレーションです。ユーザーの TOSOT+ クラウドアカウントを使用して、対応する TOSOT+ エアコンを Home Assistant に接続します。
+対応する TOSOT+ エアコンを Home Assistant に接続します。
 
 ## 機能
 
