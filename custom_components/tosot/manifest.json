@@ -12,5 +12,5 @@
   "loggers": [
     "homeassistant.components.tosot.tosot_protocol"
   ],
-  "version": "0.1.2"
+  "version": "0.1.1"
 }
