@@ -4,6 +4,8 @@
 
 Conecta equipos de aire acondicionado TOSOT+ compatibles con Home Assistant.
 
+> **Disponibilidad en HACS:** Este repositorio aún no aparece en el catálogo predeterminado de HACS. Añade `https://github.com/Gdeveloper-code/home-assistant-tosot` en **HACS > Integrations > ⋮ > Custom repositories**, selecciona **Integration** y pulsa **Add**.
+
 ## Funciones
 
 - Control de encendido, modo HVAC, temperatura objetivo y velocidad del ventilador.

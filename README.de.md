@@ -4,6 +4,8 @@
 
 Unterstützte TOSOT+-Klimageräte mit Home Assistant verbinden.
 
+> **HACS-Verfügbarkeit:** Dieses Repository ist noch nicht im HACS-Standardkatalog gelistet. Fügen Sie `https://github.com/Gdeveloper-code/home-assistant-tosot` unter **HACS > Integrations > ⋮ > Custom repositories** hinzu, wählen Sie **Integration** und klicken Sie auf **Add**.
+
 ## Funktionen
 
 - Steuerung von Ein/Aus, Betriebsart, Solltemperatur und Lüfterstufe.
