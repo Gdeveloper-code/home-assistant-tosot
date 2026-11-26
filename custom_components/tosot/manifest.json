@@ -10,7 +10,7 @@
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/Gdeveloper-code/home-assistant-tosot/issues",
   "loggers": [
-    "homeassistant.components.tosot.tosot_protocol"
+    "custom_components.tosot"
   ],
-  "version": "0.1.1"
+  "version": "0.1.2"
 }

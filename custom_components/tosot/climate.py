@@ -11,8 +11,8 @@ Maps the standard-cloud device JSON model onto HA's ClimateEntity:
 - ``speed`` (s1..s6/auto) ↔ fan_mode (filtered by ``detail.speedList``)
 - ``quiet``/``strong`` ↔ extra fan modes; they replace the active speed on
   the device, so a normal speed sends ``quiet/strong=off``. strong is
-  omitted when the graded scale tops out at s6 (translated as "Strong"), which
-  would read as a duplicate "max air" option
+  omitted when the graded scale tops out at s6 (translated as "Strong"),
+  which would read as a duplicate "max air" option
 """
 
 from collections.abc import Callable
@@ -38,7 +38,7 @@ from .coordinator import GRCoordinator
 from .entity import TosotEntity
 from .tosot_protocol import Device, DevState, GreeStandardCloudError
 
-# Cloud mode string → HA HVACMode.
+# TOSOT mode string → HA HVACMode.
 _MODE_TO_HVAC: dict[str, HVACMode] = {
     "cool": HVACMode.COOL,
     "heat": HVACMode.HEAT,
@@ -51,7 +51,8 @@ _HVAC_TO_MODE: dict[HVACMode, str] = {v: k for k, v in _MODE_TO_HVAC.items()}
 # quiet/strong are separate protocol fields, not speed values — but on the
 # device they *replace* the active fan speed, so they are exposed as extra
 # fan modes. strong is omitted when the graded scale already tops out at s6
-# (translated as "Strong") — exposing both read as two identical "max air" options.
+# (translated as "Strong") — exposing both read as two identical "max air"
+# options.
 # Selecting a normal speed must explicitly turn both off.
 _FAN_MODE_QUIET = "quiet"
 _FAN_MODE_STRONG = "strong"
@@ -126,7 +127,7 @@ async def async_setup_entry(
 
 
 class TosotClimateEntity(TosotEntity, ClimateEntity):
-    """A TOSOT cloud climate device."""
+    """A TOSOT standard-cloud climate device."""
 
     # Fan mode values stay as protocol strings (s1..s6 / auto / quiet /
     # strong); the frontend translates them via
@@ -536,7 +537,7 @@ class TosotClimateEntity(TosotEntity, ClimateEntity):
             return
         try:
             await self.coordinator.async_query_device(self.device.id)
-        except GreeStandardCloudError:
+        except GreeStandardCloudError, HomeAssistantError:
             return
         if self._state is None or self._fan_mode_accepted(requested):
             return
